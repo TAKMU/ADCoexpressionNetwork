@@ -27,7 +27,7 @@ Scripts (Python and R) for article <b>Network analysis of potential antidepressa
   <li> <b>Obtain PRR values from FAERS 2014-2023.</b> The resulting file is <i>prr_filtered.csv</i>
   </li>
   <li> <b>Activate conda environment cmapPy3</b> The environment file is <i>environment_linux.yml.</i></br>
-    <code> conda env export --no-builds > environment_linux.yml  </code>
+    <code> conda env create -f environment.yml </code>
     </br>In case that you are having difficulties with the conda environment, we are listing all the necessary packages. Please use Python 3.7 to run these scripts. 
     <ul>
       <li>cmapPy</li>
