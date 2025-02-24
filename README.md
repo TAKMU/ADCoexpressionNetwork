@@ -34,6 +34,7 @@ Scripts (Python and R) for article <b>Network analysis of potential antidepressa
       <li>pandas</li>
       <li>numpy</li>
       <li>altair</li>
+      <li>vl-convert-python</li>
       <li>scipy</li>
       <li>matplotlib</li>
       <li>pubchempy</li>
