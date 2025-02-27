@@ -9,7 +9,7 @@ Scripts (Python and R) for article <b>Network analysis of potential antidepressa
   </li>
   <li> <b>R 4.4.2</b>
   </li>
-  <li> <b>PRR data</b> obtained from the repository FAERS_database (<i>pending</i>)
+  <li> <b>PRR data</b> obtained from a repository  <a href="https://github.com/TAKMU/FAERS"> FAERS_database </a>
   </li>
 </ul>
 
