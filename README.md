@@ -24,7 +24,7 @@ Scripts (Python and R) for article <b>Network analysis of potential antidepressa
       <li>GSE92742_Broad_LINCS_inst_info.txt.gz</li>
     </ul>
   </li>
-  <li> <b>Obtain PRR values from FAERS 2014-2023.</b> The resulting file is <i>prr_filtered.csv</i>
+  <li> <b>Obtain PRR values from FAERS 2014-2023.</b> Filter all the inf values (from results of https://github.com/TAKMU/FAERS), the resulting file is <i>prr_filtered.csv</i>
   </li>
   <li> <b>Activate conda environment cmapPy3</b> The environment file is <i>environment.yml.</i></br>
     <code> conda env create -f environment.yml </code>
