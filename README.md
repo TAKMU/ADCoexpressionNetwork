@@ -5,9 +5,23 @@ Scripts (Python and R) for article <b>Network analysis of potential antidepressa
 <ul>
   <li> <b>105 GB of storage</b> approximately ( 100Gb for GEO Series GSE92742 & 5Gb for FAERS DB 2014-2023)
   </li>
-  <li> <b>Python 3.7</b> <i>using conda as python and package versioning</i>,  used Python 3.7 because of issues with the package cmapPy with newer versions. 
+  <li> <b>Python 3.7</b> <i>using conda as python and package versioning</i>,  used Python 3.7 because of issues with the package cmapPy with newer versions. You could try also with pip installation of cmapPy.
   </li>
-  <li> <b>R 4.4.2</b>
+  <li> <b>R 4.5</b> </br>
+  The renv.lock file was based on R (v = 4.5) and BiocManager(v = 3.21) for Linux Ubuntu. We will list the necessary packages so that you may run the script with different R and BiocManager versions: 
+    <ul>
+      <li>renv (not necessary if you are not going to generate reproducible environments)</li>
+      <li>tidyverse</li>
+      <li>dplyr</li>
+      <li>ggplot2</li>
+      <li>tidyverse</li>
+      <li>BiocManager
+        <ul>
+          <li>clusterProfiler</li>
+          <li>org.Hs.eg.db</li>
+        </ul>
+      </li>
+    </ul>
   </li>
   <li> <b>PRR data</b> obtained from a repository  <a href="https://github.com/TAKMU/FAERS"> FAERS_database </a>
   </li>
@@ -28,7 +42,7 @@ Scripts (Python and R) for article <b>Network analysis of potential antidepressa
   </li>
   <li> <b>Activate conda environment cmapPy3</b> The environment file is <i>environment.yml.</i></br>
     <code> conda env create -f environment.yml </code>
-    </br>In case that you are having difficulties with the conda environment, we are listing all the necessary packages. Please use Python 3.7 to run these scripts. 
+    </br>In case that you are having difficulties with the conda environment, we are listing all the necessary packages. Please use Python 3.7 to run these scripts as cmapPy requires this Python version. 
     <ul>
       <li>cmapPy (in windows, please download the package with pip).</li>
       <li>pandas</li>
@@ -42,4 +56,5 @@ Scripts (Python and R) for article <b>Network analysis of potential antidepressa
       <li>networkx</li>
     </ul>
   </li>
+  <li>Run script LINCS_ad_effects_nw_construction.py.</li>
 </ol>
