@@ -2,9 +2,9 @@ import pandas as pd
 import numpy as np
 from cmapPy.pandasGEXpress import parse
 
-gctx_file_path = '/datos/LINCS/GSE92742_Broad_LINCS_Level4_ZSPCINF_mlr12k_n1319138x12328.gctx'
+gctx_file_path = '/data/GSE92742_Broad_LINCS_Level4_ZSPCINF_mlr12k_n1319138x12328.gctx'
 df = parse.parse(gctx_file_path)
-inst = pd.read_csv("/datos/LINCS/GSE92742_Broad_LINCS_inst_info.txt", sep="\t", low_memory=False)
+inst = pd.read_csv("/data/GSE92742_Broad_LINCS_inst_info.txt", sep="\t", low_memory=False)
 ad = pd.read_csv('antidepressants.tsv', sep='\t')
 
 
@@ -28,4 +28,4 @@ for col in median_df.columns:
 
 top_bottom_reset = top_bottom.reset_index().rename(columns={"index": "rid"})
 long_format_df = top_bottom_reset.melt(id_vars='rid', var_name='cid', value_name='value')
-long_format_df[long_format_df['value'] != 0].to_csv(path_or_buf = './data/LINCS_ad_gene_nw_modified_1.csv', index=False)
+long_format_df[long_format_df['value'] != 0].to_csv(path_or_buf = './data/LINCS_ad_gene_nw_modified.csv', index=False)

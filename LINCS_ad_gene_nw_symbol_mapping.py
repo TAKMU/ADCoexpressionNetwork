@@ -1,6 +1,6 @@
 import pandas as pd
 lincs_df = pd.read_csv('./data/LINCS_ad_gene_nw_modified.csv')
-gene_info_df = pd.read_csv('/datos/LINCS/GSE92742_Broad_LINCS_gene_info.txt', sep='\t')
+gene_info_df = pd.read_csv('./data/GSE92742_Broad_LINCS_gene_info.txt', sep='\t')
 
 gene_dict = dict(zip(gene_info_df['pr_gene_id'].astype(str), gene_info_df['pr_gene_symbol']))
 lincs_df['rid'] = lincs_df['rid'].astype(str)

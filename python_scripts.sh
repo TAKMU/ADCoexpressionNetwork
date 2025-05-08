@@ -3,7 +3,7 @@
 python LINCS_ad_gene_nw_construction_modified.py
 python LINCS_ad_gene_nw_symbol_mapping.py
 python LINCS_ad_effects_nw_construction.py
-python ad_Tanimofo_similarity.py
+python ad_Tanimoto_similarity.py
 python ad_gene_Jaccard_similarity.py
-python ad_effect_Jaccard_similarity.py
+python ad_effects_Jaccard_similarity.py
 python ad_nsh_clustering.py
