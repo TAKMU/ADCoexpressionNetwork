@@ -56,5 +56,55 @@ Scripts (Python and R) for article <b>Network analysis of potential antidepressa
       <li>networkx</li>
     </ul>
   </li>
-  <li>Run script LINCS_ad_effects_nw_construction.py.</li>
+  <li>In case that you are having difficulties with renv, we are listing all the necessary libraries. Please consider that we used R 4.5 to run these scripts. In case it is your first time using these libraries, it may be necessary to install some dependencies on Linux. We added a bash script for ubuntu to download these dependencies <code>./Additional_Scripts/install_dependencies.sh</code> 
+    <ul>
+      <li>tidyverse</li>
+      <li>dplyr</li>
+      <li>clusterProfiler</li>
+      <li>org.Hs.eg.db</li>
+      <li>ggplot2</li>
+    </ul>
+  </li>
+  </ol>
+  
+ ## Obtaining results:
+ Please consider that all the results and essential data will be located in the directories ./data and ./img. Csv files will be located in data and heatmaps, gsea or hierarchical clustering will be located on img. 
+  <ol>
+  <li>Run script python_scripts.sh</li>
+  <li>Run Starting_script_R.R</br>
+  If you are not planning on applying reproducible environment, please delete the following line (17-18) </br>
+    <code>if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
+    renv::restore()</code>
+  </li>
+  <li>Run jupyter notebook: ad_adr_local_nw_analysis.ipynb</li>
+  <li>Run jupyter notebook: ad_gene_nw_analysis.ipynb</li>
 </ol>
+
+## Scripts (explanation):
+### R
+
+<ul>
+  <li> Starting_Script_R.R
+    <ul>    
+      <li>Input: 
+        <ul>
+          <li>./data/LINCS_ad_gene_nw_modified_with_symbols.csv</li>
+          <li>./data/structural_ad_clustering.csv</li>
+          <li>./data/functional_top_ad_clustering.csv</li>
+          <li>./data/functional_bottom_ad_clustering.csv</li>
+          <li>./data/functional_global_ad_clustering.csv</li>
+          <li>./data/functional_local_ad_clustering.csv</li>
+        </ul>
+      </li>
+      <li>Output
+        <ul>
+          <li>./data/genes_top_unicos.csv</li>
+          <li>./data/genes_bottom_unicos.csv</li>
+          <li>./data/enr_top_genes.csv</li>
+          <li>./data/enr_bottom_genes.csv</li>
+          <li>./img/cnetplot_top.png</li>
+          <li>./img/cnetplot_bottom.png</li>
+        </ul>
+      </li>
+  </li>
+</ul>
